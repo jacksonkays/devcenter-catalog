@@ -16,13 +16,13 @@ $npm = "C:\Program Files\nodejs\node.exe"
 $params = "npm start:server" # where to start node from
 Start-Job -FilePath $npm -ArgumentList $params
 # set up dev tunnel
-devtunnel user login ## how to login?
-devtunnel create my-dev-tunnel
-devtunnel port create -p 5000 --protocol http
+# devtunnel user login ## how to login?
+# devtunnel create my-dev-tunnel
+# devtunnel port create -p 5000 --protocol http
 # store url and token in kv 
-az login ## how to login?
-az account set --subscription "3de261df-f2d8-4c00-a0ee-a0be30f1e48e"
-$token = devtunnel token my-dev-tunnel --scopes connect
-$url = devtunnel port show -p 5000 | ConvertFrom-Json | Select-Object -ExpandProperty url
-az keyvault secret set --vault-name "devcenteraipoc-kv" --name "tunnel-url" --value $url
-az keyvault secret set --vault-name "devcenteraipoc-kv" --name "tunnel-token" --value $token
+# az login ## how to login?
+# az account set --subscription "3de261df-f2d8-4c00-a0ee-a0be30f1e48e"
+# $token = devtunnel token my-dev-tunnel --scopes connect
+# $url = devtunnel port show -p 5000 | ConvertFrom-Json | Select-Object -ExpandProperty url
+# az keyvault secret set --vault-name "devcenteraipoc-kv" --name "tunnel-url" --value $url
+# az keyvault secret set --vault-name "devcenteraipoc-kv" --name "tunnel-token" --value $token
