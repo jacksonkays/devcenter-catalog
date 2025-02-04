@@ -1,0 +1,63 @@
+{
+  "tasks": [
+    {
+      "name": "tasks-catalog/winget",
+      "displayName": "Install Microsoft DevTunnel",
+      "parameters": {
+        "package": "Microsoft.devtunnel"
+      }
+    },
+    {
+        "name": "tasks-catalog/winget",
+        "displayName": "Install Azure CLI",
+        "parameters": {
+          "package": "Microsoft.AzureCLI"
+        }
+    },
+    {
+        "name": "tasks-catalog/winget",
+        "displayName": "Install OpenJDK 8",
+        "parameters": {
+          "package": "EclipseAdoptium.Temurin.8.JDK"
+        }
+    },
+    {
+        "name": "tasks-catalog/winget",
+        "displayName": "Install OpenJDK 11",
+        "parameters": {
+          "package": "Microsoft.OpenJDK.11"
+        }
+    },
+    {
+        "name": "tasks-catalog/winget",
+        "displayName": "Install OpenJDK 21",
+        "parameters": {
+          "package": "Microsoft.OpenJDK.21"
+        }
+    },
+    {
+        "name": "tasks-catalog/choco",
+        "displayName": "Install Node 22",
+        "parameters": {
+          "package": "nodejs-lts",
+          "version": "22"
+        }
+    },
+    {
+        "name": "tasks-catalog/git-clone",
+        "displayName": "Clone AutoDev agent",
+        "parameters": {
+          "repositoryUrl": "autodev-repo-link-here",
+          "directory": "clone-repo-here"
+        }
+    },
+    {
+        "name": "tasks-catalog/powershell",
+        "displayName": "Install Maven, start AutoDev, set up DevTunnel",
+        "parameters": {
+          "command": ".\setup-devbox.ps1",
+          "workingDirectory": "C:"
+        }
+    }
+  ]
+}
