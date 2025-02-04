@@ -1,0 +1,31 @@
+$schema: "1.0"
+name: devbox-customization
+tasks:
+  - name: winget
+    parameters:
+      package: Microsoft.devtunnel
+  - name: winget
+    parameters:
+      package: Microsoft.AzureCLI
+  - name: winget
+    parameters:
+      package: EclipseAdoptium.Temurin.8.JDK
+  - name: winget
+    parameters:
+      package: Microsoft.OpenJDK.11
+  - name: winget
+    parameters:
+      package: Microsoft.OpenJDK.21
+  - name: choco  
+    parameters:
+      package: nodejs-lts
+      version: 22
+  - name: git-clone
+    description: Clone the AutoDev agent repository
+    parameters:
+      repositoryUrl: "host-git-repo-here"
+      directory: "figure-out-where-to-clone"
+  - name: powershell
+    parameters:
+      command: '.\setup-devbox.ps1'
+      workingDirectory: 'C:'
