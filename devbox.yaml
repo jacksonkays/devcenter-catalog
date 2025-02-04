@@ -1,33 +1,32 @@
 $schema: "1.0"
 name: devbox-customization
 tasks:
-  - name: winget
+  - name: tasks-catalog/winget
     parameters:
       package: Microsoft.devtunnel
-  - name: winget
+  - name: tasks-catalog/winget
     parameters:
       package: Microsoft.AzureCLI
-  - name: winget
+  - name: tasks-catalog/winget
     parameters:
       package: EclipseAdoptium.Temurin.8.JDK
-  - name: winget
+  - name: tasks-catalog/winget
     parameters:
       package: Microsoft.OpenJDK.11
-  - name: winget
+  - name: tasks-catalog/winget
     parameters:
       package: Microsoft.OpenJDK.21
-  - name: choco  
+  - name: tasks-catalog/choco  
     parameters:
       package: nodejs-lts
       version: 22
-  - name: git-clone
+  - name: tasks-catalog/git-clone
     description: Clone the AutoDev agent repository
     parameters:
       repositoryUrl: "https://devdiv.visualstudio.com/DefaultCollection/OnlineServices/_git/AutoDev"
       directory: "C:/AutoDev"
       pat: "{{ado://OnlineServices}}"
-
-  - name: powershell
+  - name: tasks-catalog/powershell
     parameters:
       command: '.\setup-devbox.ps1'
       workingDirectory: 'C:/AutoDev'
