@@ -47,8 +47,9 @@
         "name": "tasks-catalog/git-clone",
         "displayName": "Clone AutoDev agent",
         "parameters": {
-          "repositoryUrl": "autodev-repo-link-here",
-          "directory": "clone-repo-here"
+          "repositoryUrl": "https://devdiv.visualstudio.com/DefaultCollection/OnlineServices/_git/AutoDev",
+          "directory": "C:/AutoDev",
+          "pat": "{{ado://OnlineServices}}"
         }
     },
     {

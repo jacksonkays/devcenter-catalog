@@ -23,9 +23,11 @@ tasks:
   - name: git-clone
     description: Clone the AutoDev agent repository
     parameters:
-      repositoryUrl: "host-git-repo-here"
-      directory: "figure-out-where-to-clone"
+      repositoryUrl: "https://devdiv.visualstudio.com/DefaultCollection/OnlineServices/_git/AutoDev"
+      directory: "C:/AutoDev"
+      pat: "{{ado://OnlineServices}}"
+
   - name: powershell
     parameters:
       command: '.\setup-devbox.ps1'
-      workingDirectory: 'C:'
+      workingDirectory: 'C:/AutoDev'
