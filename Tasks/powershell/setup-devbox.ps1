@@ -17,6 +17,7 @@ Remove-Item "$env:temp\temp.zip" -Force
 
 # start application in separate shell
 Set-Location "C:\AutoDev"
+npm install
 $npm = "C:\Program Files\nodejs\node.exe"
 $params = "npm start:server" # where to start node from
 Start-Job -FilePath $npm -ArgumentList $params
