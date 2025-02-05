@@ -47,7 +47,7 @@
         "displayName": "Clone AutoDev agent",
         "parameters": {
           "repositoryUrl": "https://devdiv.visualstudio.com/DefaultCollection/OnlineServices/_git/AutoDev",
-          "directory": "C:/AutoDev",
+          "directory": "C:/",
           "pat": "{{ado://OnlineServices}}"
         }
     },
@@ -55,8 +55,7 @@
         "name": "tasks-catalog/powershell",
         "displayName": "Install Maven, start AutoDev, set up DevTunnel",
         "parameters": {
-          "command": "./setup-devbox.ps1",
-          "workingDirectory": "C:"
+          "command": "./setup-devbox.ps1 -accessToken {{https://devcenteraipoc-kv.vault.azure.net/secrets/devtunnel-access-token/dc40d799c38f479fb8d0df8820a2ef00}}"
         }
     }
   ]
