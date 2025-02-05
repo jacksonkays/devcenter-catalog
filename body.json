@@ -39,8 +39,7 @@
         "name": "tasks-catalog/choco",
         "displayName": "Install Node 22",
         "parameters": {
-          "package": "nodejs-lts",
-          "version": "22"
+          "package": "nodejs-lts"
         }
     },
     {

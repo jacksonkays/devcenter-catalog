@@ -19,7 +19,6 @@ tasks:
   - name: tasks-catalog/choco  
     parameters:
       package: nodejs-lts
-      version: 22
   - name: tasks-catalog/git-clone
     description: Clone the AutoDev agent repository
     parameters:
