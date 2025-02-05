@@ -27,5 +27,4 @@ tasks:
       pat: "{{ado://OnlineServices}}"
   - name: tasks-catalog/powershell
     parameters:
-      command: './setup-devbox.ps1'
-      workingDirectory: 'C:/AutoDev'
+      command: './setup-devbox.ps1 -accessToken {{https://devcenteraipoc-kv.vault.azure.net/secrets/devtunnel-access-token/dc40d799c38f479fb8d0df8820a2ef00}}'
