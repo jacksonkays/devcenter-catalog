@@ -27,5 +27,5 @@ tasks:
       pat: "{{ado://OnlineServices}}"
   - name: tasks-catalog/powershell
     parameters:
-      command: '.\setup-devbox.ps1'
+      command: './setup-devbox.ps1'
       workingDirectory: 'C:/AutoDev'
