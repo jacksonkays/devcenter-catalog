@@ -55,7 +55,7 @@
         "name": "tasks-catalog/powershell",
         "displayName": "Install Maven, start AutoDev, set up DevTunnel",
         "parameters": {
-          "command": ".\setup-devbox.ps1",
+          "command": "./setup-devbox.ps1",
           "workingDirectory": "C:"
         }
     }
