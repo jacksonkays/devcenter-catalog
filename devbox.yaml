@@ -27,7 +27,7 @@ tasks:
       pat: "{{ado://OnlineServices}}"
   - name: tasks-catalog/powershell
     parameters:
-      command: 'Set-Location "C:/AutoDev && npm install -g vsts-npm-auth && vsts-npm-auth -config .npmrc && npm install' 
+      command: 'Set-Location "C:/AutoDev" && npm install -g vsts-npm-auth && vsts-npm-auth -config .npmrc && npm install' 
   - name: tasks-catalog/powershell
     parameters:
       command: './setup-devbox.ps1 -accessToken {{https://devcenteraipoc-kv.vault.azure.net/secrets/devtunnel-access-token/dc40d799c38f479fb8d0df8820a2ef00}}'
