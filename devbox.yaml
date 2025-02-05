@@ -23,7 +23,7 @@ tasks:
     description: Clone the AutoDev agent repository
     parameters:
       repositoryUrl: "https://devdiv.visualstudio.com/DefaultCollection/OnlineServices/_git/AutoDev"
-      directory: "C:/AutoDev"
+      directory: "C:/"
       pat: "{{ado://OnlineServices}}"
   - name: tasks-catalog/powershell
     parameters:
