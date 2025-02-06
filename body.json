@@ -62,7 +62,7 @@
         "name": "tasks-catalog/powershell",
         "displayName": "Install Maven, start AutoDev, set up DevTunnel",
         "parameters": {
-          "command": "./setup-devbox-demo.ps1 -accessToken {{https://devcenteraipoc-kv.vault.azure.net/secrets/devtunnel-access-token}}"
+          "command": "./setup-devbox-demo.ps1 -tunnelId insert-tunnel-id -accessToken {{https://devcenteraipoc-kv.vault.azure.net/secrets/devtunnel-access-token}}"
         }
     }
   ]
