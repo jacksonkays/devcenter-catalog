@@ -4,6 +4,7 @@ name: powershell
 description: Execute a powershell command.
 author: Microsoft Corporation
 command: ".\\Run-Command.ps1 -Command {{command}} -WorkingDirectory {{workingDirectory}}"
+timeout: 60
 inputs:
   command:
     type: string
