@@ -22,4 +22,6 @@ $npm = "C:\Program Files\nodejs\node.exe"
 $params = "server.js" # where to start node from
 Start-Process -FilePath $npm -ArgumentList $params
 # set up dev tunnel
-devtunnel host my-dev-tunnel --access-token $accessToken
+$devtunnelExe= "C:\Users\jackkays\AppData\Local\Microsoft\WinGet\Links\devtunnel.exe"
+Start-Process -FilePath $devtunnelExe -ArgumentList "host my-dev-tunnel --access-token $accessToken"
+# devtunnel host my-dev-tunnel --access-token $accessToken
