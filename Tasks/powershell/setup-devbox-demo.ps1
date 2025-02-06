@@ -20,6 +20,6 @@ Set-Location "C:\azure-devcenter-ai\agent-node-app"
 npm install
 $npm = "C:\Program Files\nodejs\node.exe"
 $params = "server.js" # where to start node from
-Start-Job -FilePath $npm -ArgumentList $params
+Start-Process -FilePath $npm -ArgumentList $params
 # set up dev tunnel
 devtunnel host my-dev-tunnel --access-token $accessToken
