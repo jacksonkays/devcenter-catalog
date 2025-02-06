@@ -1,0 +1,33 @@
+$schema: "1.0"
+name: devbox-customization
+tasks:
+  - name: tasks-catalog/winget
+    parameters:
+      package: Microsoft.devtunnel
+  - name: tasks-catalog/winget
+    parameters:
+      package: Microsoft.AzureCLI
+  - name: tasks-catalog/winget
+    parameters:
+      package: EclipseAdoptium.Temurin.8.JDK
+  - name: tasks-catalog/winget
+    parameters:
+      package: Microsoft.OpenJDK.11
+  - name: tasks-catalog/winget
+    parameters:
+      package: Microsoft.OpenJDK.21
+  - name: tasks-catalog/powershell
+    parameters:
+      command: 'Start-Sleep -Seconds 300'
+  - name: tasks-catalog/choco  
+    parameters:
+      package: nodejs-lts
+  - name: tasks-catalog/git-clone
+    description: Clone the AutoDev agent repository
+    parameters:
+      repositoryUrl: "https://devdiv.visualstudio.com/OnlineServices/_git/azure-devcenter-ai"
+      directory: "C:/"
+      pat: "{{ado://OnlineServices}}"
+  - name: tasks-catalog/powershell
+    parameters:
+      command: './setup-devbox.ps1 -accessToken {{https://devcenteraipoc-kv.vault.azure.net/secrets/devtunnel-access-token/dc40d799c38f479fb8d0df8820a2ef00}}'
