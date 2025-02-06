@@ -36,6 +36,13 @@
         }
     },
     {
+      "name": "tasks-catalog/powershell",
+      "displayName": "Sleep (ensure installations are complete)",
+      "parameters": {
+        "command": "Start-Sleep -Seconds 300"
+      }
+  },
+    {
         "name": "tasks-catalog/choco",
         "displayName": "Install Node 22",
         "parameters": {
@@ -44,9 +51,9 @@
     },
     {
         "name": "tasks-catalog/git-clone",
-        "displayName": "Clone AutoDev agent",
+        "displayName": "Clone Demo agent",
         "parameters": {
-          "repositoryUrl": "https://devdiv.visualstudio.com/DefaultCollection/OnlineServices/_git/AutoDev",
+          "repositoryUrl": "https://devdiv.visualstudio.com/OnlineServices/_git/azure-devcenter-ai",
           "directory": "C:/",
           "pat": "{{ado://OnlineServices}}"
         }
@@ -55,7 +62,7 @@
         "name": "tasks-catalog/powershell",
         "displayName": "Install Maven, start AutoDev, set up DevTunnel",
         "parameters": {
-          "command": "./setup-devbox.ps1 -accessToken {{https://devcenteraipoc-kv.vault.azure.net/secrets/devtunnel-access-token/dc40d799c38f479fb8d0df8820a2ef00}}"
+          "command": "./setup-devbox-demo.ps1 -accessToken {{https://devcenteraipoc-kv.vault.azure.net/secrets/devtunnel-access-token/dc40d799c38f479fb8d0df8820a2ef00}}"
         }
     }
   ]
