@@ -16,9 +16,10 @@ Remove-Item "$env:temp\temp.zip" -Force
 [System.Environment]::SetEnvironmentVariable('JAVA8HOME', "C:\Program Files\Microsoft\jdk-8.0.442.6-hotspot", 'Machine')
 
 # start application in separate shell
-Set-Location "C:\AutoDev"
+Set-Location "C:\azure-devcenter-ai\agent-node-app"
+npm install
 $npm = "C:\Program Files\nodejs\node.exe"
-$params = "node server.js" # where to start node from
+$params = "server.js" # where to start node from
 Start-Job -FilePath $npm -ArgumentList $params
 # set up dev tunnel
 devtunnel host my-dev-tunnel --access-token $accessToken

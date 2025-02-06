@@ -16,6 +16,9 @@ tasks:
   - name: tasks-catalog/winget
     parameters:
       package: Microsoft.OpenJDK.21
+  - name: tasks-catalog/powershell
+    parameters:
+      command: 'Start-Sleep -Seconds 300'
   - name: tasks-catalog/choco  
     parameters:
       package: nodejs-lts
